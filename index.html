@@ -9,15 +9,17 @@
     <link rel="stylesheet" type="text/css" href="css/minireset.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <script defer type="text/javascript" src="js/main.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
 </head>
 <body>
-    <div class="wallpaper"></div>
+    <div id="wallpaper" class="wallpaper" data-image="images/austria.jpeg"></div>
     <div class="content">
         <aside class="side">
-            <figure class="picture">
+            <figure id="picture" class="picture">
                 <div class="picture-shadow"></div>
-                <img id="pictureImage" class="picture-image"
+                <img id="pictureImage" id="picture-image" 
+                    class="picture-image"
                     src="images/alex.jpeg"
                     srcset="images/alex.jpeg 1x,
                             images/alex@2x.jpeg 2x,
@@ -66,5 +68,15 @@
             </div>
         </main>
     </div>
+    <noscript>
+        <style type="text/css">
+            .wallpaper {
+                animation-name: zoomOut;
+            }
+            .picture {
+                animation-name: dropIn;
+            }
+        </style>
+    </noscript>
 </body>
 </html>
